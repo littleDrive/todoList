@@ -1,30 +1,15 @@
-import React from 'react'
+import React from "react";
+import PropTypes from 'prop-types'
+import TodoContainer from "../../containers/TodoContainer";
 
 class TodoList extends React.Component {
-
-    constructor(props) {
-        super(props)
-    }
-
-    componentWillUpdate() {
-        console.log("1111")
-
-        console.log(this.props.todos)
-    }
     render() {
-        return (
-            // <ul>
-            //     {/* {this.props.todos.map(todo => (
-            //         <li key={todo.id}>
-            //             {todo.text}
-            //         </li>
-            //     ))} */}
-            //     {this.props.todos}
-            // </ul>
-        <p>hello{this.props.todos}</p>
-        )
+        return (<div className={"todo-list"}>
+            {this.props.todoList.map(
+                (todo, index) => <TodoContainer key={index} id={index} status={todo.status} text={todo.text}/>
+            )}
+        </div>)
     }
 }
 
-export default TodoList
-
+export default TodoList;
