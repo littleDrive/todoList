@@ -1,4 +1,3 @@
-import Todo from '../Todo'
 import React from 'react'
 
 class TodoList extends React.Component {
@@ -7,17 +6,25 @@ class TodoList extends React.Component {
         super(props)
     }
 
+    componentWillUpdate() {
+        console.log("1111")
+
+        console.log(this.props.todos)
+    }
     render() {
         return (
-            <ul>
-                {/* {this.props.todoList.map((todo, index) => {
-                    <Todo {...todo} key={index}></Todo>
-                })} */}
-
-                <Todo/>
-            </ul>
+            // <ul>
+            //     {/* {this.props.todos.map(todo => (
+            //         <li key={todo.id}>
+            //             {todo.text}
+            //         </li>
+            //     ))} */}
+            //     {this.props.todos}
+            // </ul>
+        <p>hello{this.props.todos}</p>
         )
     }
 }
 
 export default TodoList
+

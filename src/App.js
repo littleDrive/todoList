@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import TodoList from './components/TodoList';
 import TodoFormContainer from './containers/todoForm';
+import TodoListContainer from './containers/todoList';
+import TodoList from './components/TodoList';
+
 
 function App() {
   return (
@@ -10,8 +11,9 @@ function App() {
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header> */}
-      <TodoList/>
+      <TodoListContainer/>
       <TodoFormContainer/>
+      <TodoList/>
     </div>
   );
 }

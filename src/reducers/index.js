@@ -1,9 +1,9 @@
-import { todoList } from './todoList'
+import todos from './todos'
 import {combineReducers} from 'redux'
 
 const reducers = 
     combineReducers({
-        todoList
+        todos
     })
 
 
